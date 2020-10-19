@@ -14,12 +14,14 @@ int main() {
     CPU cpu;
     while(cin >> enderecoMemoria >> tipoOperacao) {
         if(tipoOperacao == 0) {
-            cpu.LerDaMemoria(enderecoMemoria);
+            bool hitOuMiss = cpu.LerDaMemoria(enderecoMemoria);
+            //Tratar hit ou miss
         } else {
             cin >> dadoBinario;
             //Converte a string binaria para um inteiro
             dado = std::stoi(dadoBinario, nullptr, 2);
-            cpu.EscreverNaMemoria(enderecoMemoria, dado);
+            bool hitOuMiss = cpu.EscreverNaMemoria(enderecoMemoria, dado);
+            //Tratar hit ou miss
         }
     }
     return 0;

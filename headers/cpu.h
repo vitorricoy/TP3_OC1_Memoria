@@ -6,8 +6,9 @@
 class CPU {
     public:
         CPU();
-        void EscreverNaMemoria(int endereco, int dado);
-        void LerDaMemoria(int endereco);
+        //Retorna true se for hit e false se for miss
+        bool EscreverNaMemoria(int endereco, int dado);
+        bool LerDaMemoria(int endereco);
     private:
         Cache cache;
 };

@@ -6,8 +6,9 @@
 class Cache {
     public:
         Cache();
-        void LerDado();
-        void EscreverDado();
+        //Retorna true se for hit e false se for miss
+        bool LerDado();
+        bool EscreverDado();
     private:
         Memoria memoria;
 };
