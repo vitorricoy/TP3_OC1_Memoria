@@ -8,7 +8,7 @@ class Cache {
         Cache();
         //Retorna true se for hit e false se for miss
         bool LerDado();
-        bool EscreverDado();
+        void EscreverDado();
     private:
         Memoria memoria;
 };
