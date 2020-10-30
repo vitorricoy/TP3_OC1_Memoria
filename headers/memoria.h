@@ -1,13 +1,17 @@
 #ifndef TP3_OC1_MEMORIA_HEADERS_MEMORIA_H
 #define TP3_OC1_MEMORIA_HEADERS_MEMORIA_H
 
+#include <vector>
+
+using namespace std;
+
 class Memoria {
     public:
         Memoria();
-        void LerDado();
-        void EscreverDado();
+        int LerDado(int endereco);
+        void EscreverDado(int endereco, int dado);
     private:
-        vector<vector<int> > memoria;
+        vector<int> memoria;
 };
 
 #endif //TP3_OC1_MEMORIA_HEADERS_MEMORIA_H

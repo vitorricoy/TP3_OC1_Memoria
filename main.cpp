@@ -13,7 +13,7 @@ struct InformacaoOperacao {
     int tipo;
     int dado;
     bool hit;
-    InformacaoOperacao(int end_, int tipo_, int dado_, bool hit_) : endereco(endereco_), tipo(tipo_), dado(dado_), hit(hit_) {
+    InformacaoOperacao(int end_, int tipo_, int dado_, bool hit_) : endereco(end_), tipo(tipo_), dado(dado_), hit(hit_) {
         //Vazio
     }
 };
@@ -47,7 +47,7 @@ int main() {
             dado = std::stoi(dadoBinario, nullptr, 2);
             //Simula a cpu escrevendo na memória
             cpu.EscreverNaMemoria(enderecoMemoria, dado);
-            //Salva a informação da operação para imprimir as estatisticas no fim da execução
+            //Salva a informação da operação 'para imprimir as estatisticas no fim da execução
             informacoes.push_back(InformacaoOperacao(enderecoMemoria, tipoOperacao, dado, false));
         }
     }
@@ -57,7 +57,7 @@ int main() {
 
     //Conta cada estado para os cálculos da estatística
     for(InformacaoOperacao informacao : informacoes) {
-        if(informacao.tipoOperacao == 0) {
+        if(informacao.tipo == 0) {
             if(informacao.hit) {
                 contHit++;
             } else {
@@ -84,15 +84,15 @@ int main() {
 
     //Imprime cada instrução seguida da identificação de que se foi uma escrita, hit ou um miss
     for(InformacaoOperacao informacao : informacoes) {
-        if(informacao.tipoOperacao == 0) {
-            cout << informacao.endereco << " " << informacao.tipoOperacao << " ";
+        if(informacao.tipo == 0) {
+            cout << informacao.endereco << " " << informacao.tipo << " ";
             if(informacao.hit) {
                 cout << "H" << endl;
             } else {
                 cout << "M" << endl;
             }
         } else {
-            cout << informacao.endereco << " " << informacao.tipoOperacao << " " << bitset<32>(informacao.dado) << " W" << endl;
+            cout << informacao.endereco << " " << informacao.tipo << " " << bitset<32>(informacao.dado) << " W" << endl;
         }
     }
     return 0;
