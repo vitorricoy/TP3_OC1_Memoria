@@ -15,7 +15,7 @@ class Memoria {
         int LerDado(int endereco);
 
         //Escreve um dado na memória
-        void EscreverDado(int endereco, int dado);
+        void EscreverDado(int endereco, unsigned int dado);
 
     private:
 
