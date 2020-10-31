@@ -26,10 +26,6 @@ class Cache {
         //Representação da cache que guarda os seus blocos
         vector<Bloco> cache;
         
-        //Constantes dos offsets e indices da cache
-        const int BYTE_OFFSET = 2;
-        const int WORD_OFFSET = 2;
-        const int INDEX = 6;
 };
 
 #endif //TP3_OC1_MEMORIA_HEADERS_CACHE_H

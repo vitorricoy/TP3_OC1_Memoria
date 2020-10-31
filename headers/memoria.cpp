@@ -1,5 +1,9 @@
 #include "memoria.h"
 
+
+//Constante do ByteOffset do endereço
+const int BYTE_OFFSET = 2;
+
 //Constroi a Memoria, inicializando seus dados
 Memoria::Memoria(){
     //Inicializa a memória com 1024 palavras

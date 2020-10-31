@@ -1,6 +1,11 @@
 #include "cache.h"
 #include "memoria.h"
 
+//Constantes dos offsets e indices da cache
+const int BYTE_OFFSET = 2;
+const int WORD_OFFSET = 2;
+const int INDEX = 6;
+
 //Estrutura representando uma entrada de um bloco na cache
 struct Bloco {
     int tag;
@@ -73,7 +78,7 @@ bool Cache::LerDado(int endereco) {
 }
 
 //Simula a escrita de um dado na cache
-Cache::EscreverDado(int endereco, int dado) {
+void Cache::EscreverDado(int endereco, int dado) {
     //Determina o índice da palavra no bloco do endereço lido na cache
     int indice_palavra = (endereco >> BYTE_OFFSET) % (1 << WORD_OFFSET);
     //Determina o índice do bloco do endereço lido na cache

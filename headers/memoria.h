@@ -21,9 +21,7 @@ class Memoria {
 
         //Representação da memória que guarda cada palavra
         vector<int> memoria;
-
-        //Constante do ByteOffset do endereço
-        const int BYTE_OFFSET = 2;
+        
 };
 
 #endif //TP3_OC1_MEMORIA_HEADERS_MEMORIA_H
