@@ -4,7 +4,19 @@
 #include "memoria.h"
 
 //Estrutura representando uma entrada de um bloco na cache
-struct Bloco;
+struct Bloco {
+    int tag;
+    bool valid;
+    bool sujo;
+    vector<int> data;
+
+    //Construtor vazio da entrada
+    Bloco() {
+        valid = false;
+        sujo = false;
+        data.resize(4);
+    }
+};
 
 class Cache {
     public:

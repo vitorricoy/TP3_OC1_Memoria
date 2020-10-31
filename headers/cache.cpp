@@ -6,21 +6,6 @@ const int BYTE_OFFSET = 2;
 const int WORD_OFFSET = 2;
 const int INDEX = 6;
 
-//Estrutura representando uma entrada de um bloco na cache
-struct Bloco {
-    int tag;
-    bool valid;
-    bool sujo;
-    vector<int> data;
-
-    //Construtor vazio da entrada
-    Bloco() {
-        valid = false;
-        sujo = false;
-        data.resize(4);
-    }
-};
-
 //Constroi a Cache, inicializando seus dados e a memória principal
 Cache::Cache () {
     //Instancia a memória principal
@@ -32,8 +17,6 @@ Cache::Cache () {
 //Retorna true se for hit e false se for miss
 //Simula uma leitura de um dado na cache
 bool Cache::LerDado(int endereco) {
-    //Determina o índice da palavra no bloco do endereço lido na cache
-    int indice_palavra = (endereco >> BYTE_OFFSET) % (1 << WORD_OFFSET);
     //Determina o índice do bloco do endereço lido na cache
     int indice_bloco =  (endereco >> (BYTE_OFFSET + WORD_OFFSET)) % (1 << INDEX);
     //Determina o valor da tag do endereço lido
