@@ -8,7 +8,7 @@ struct Bloco {
     int tag;
     bool valid;
     bool sujo;
-    vector<int> data;
+    vector<unsigned int> data;
 
     //Construtor vazio da entrada
     Bloco() {
@@ -29,7 +29,7 @@ class Cache {
         bool LerDado(int endereco);
 
         //Simula a escrita de um dado na cache
-        void EscreverDado(int endereco, int dado);
+        void EscreverDado(int endereco, unsigned int dado);
 
     private:
         //Memória principal que é utilizada pela cache

@@ -20,8 +20,8 @@ class Memoria {
     private:
 
         //Representação da memória que guarda cada palavra
-        vector<int> memoria;
-        
+        vector<unsigned int> memoria;
+
 };
 
 #endif //TP3_OC1_MEMORIA_HEADERS_MEMORIA_H

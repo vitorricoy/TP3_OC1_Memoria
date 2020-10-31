@@ -61,7 +61,7 @@ bool Cache::LerDado(int endereco) {
 }
 
 //Simula a escrita de um dado na cache
-void Cache::EscreverDado(int endereco, int dado) {
+void Cache::EscreverDado(int endereco, unsigned int dado) {
     //Determina o índice da palavra no bloco do endereço lido na cache
     int indice_palavra = (endereco >> BYTE_OFFSET) % (1 << WORD_OFFSET);
     //Determina o índice do bloco do endereço lido na cache

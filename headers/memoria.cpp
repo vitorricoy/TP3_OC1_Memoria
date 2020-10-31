@@ -7,7 +7,7 @@ const int BYTE_OFFSET = 2;
 //Constroi a Memoria, inicializando seus dados
 Memoria::Memoria(){
     //Inicializa a memória com 1024 palavras
-    memoria = vector<int>(1024);
+    memoria = vector<unsigned int>(1024);
 }
 
 //Le um dado da memória, retornando o dado lido
@@ -19,7 +19,7 @@ int Memoria::LerDado(int endereco){
 }
 
 //Escreve um dado na memória
-void Memoria::EscreverDado(int endereco, int dado){
+void Memoria::EscreverDado(int endereco, unsigned int dado){
     //Calcula o endereço da palavra, utilizando o ByteOffset
     endereco = (endereco >> BYTE_OFFSET);
     //Atribui o novo dado à palavra

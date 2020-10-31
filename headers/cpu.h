@@ -10,7 +10,7 @@ class CPU {
         CPU();
 
         //Simula uma escrita na memória pela CPU
-        void EscreverNaMemoria(int endereco, int dado);
+        void EscreverNaMemoria(int endereco, unsigned int dado);
 
         //Retorna true se for hit e false se for miss
         //Simula uma leitura na memória pela CPU

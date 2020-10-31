@@ -8,7 +8,7 @@ CPU::CPU() {
 }
 
 //Simula uma escrita na memória pela CPU
-void CPU::EscreverNaMemoria(int endereco, int dado) {
+void CPU::EscreverNaMemoria(int endereco, unsigned int dado) {
     cache.EscreverDado(endereco, dado);
 }
 

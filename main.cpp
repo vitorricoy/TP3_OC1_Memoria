@@ -24,7 +24,8 @@ int main() {
     freopen("result.txt", "w", stdout);
     
     //Declara as variáveis dos dados que serão lidos
-    int enderecoMemoria, tipoOperacao, dado;
+    int enderecoMemoria, tipoOperacao; 
+    unsigned int dado;
     string dadoBinario;
 
     //Declara a cpu que é responsável por disparar a operação lida da entrada
@@ -44,7 +45,7 @@ int main() {
             //Lê o dado a ser escrito
             cin >> dadoBinario;
             //Converte a string binaria para um inteiro
-            dado = std::stoi(dadoBinario, nullptr, 2);
+            dado = std::stoul(dadoBinario, nullptr, 2);
             //Simula a cpu escrevendo na memória
             cpu.EscreverNaMemoria(enderecoMemoria, dado);
             //Salva a informação da operação 'para imprimir as estatisticas no fim da execução
