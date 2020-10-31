@@ -3,6 +3,7 @@
 
 #include "memoria.h"
 
+//Estrutura representando uma entrada de um bloco na cache
 struct Bloco;
 
 class Cache {
