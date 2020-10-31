@@ -5,10 +5,9 @@ Memoria::Memoria(){
 }
 
 int Memoria::LerDado(int endereco){
-    return memoria[endereco];
+    return memoria[endereco / 4];
 }
 
 void Memoria::EscreverDado(int endereco, int dado){
-    endereco = endereco/4;
-    memoria[endereco] = dado;
+    memoria[endereco / 4] = dado;
 }
