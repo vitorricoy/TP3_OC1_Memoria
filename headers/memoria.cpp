@@ -5,9 +5,11 @@ Memoria::Memoria(){
 }
 
 int Memoria::LerDado(int endereco){
-    return memoria[endereco / 4];
+    endereco = (endereco >> BYTE_OFFSET);
+    return memoria[endereco];
 }
 
 void Memoria::EscreverDado(int endereco, int dado){
-    memoria[endereco / 4] = dado;
+    endereco = (endereco >> BYTE_OFFSET);
+    memoria[endereco] = dado;
 }

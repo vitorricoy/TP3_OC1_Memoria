@@ -12,6 +12,7 @@ class Memoria {
         void EscreverDado(int endereco, int dado);
     private:
         vector<int> memoria;
+        const int BYTE_OFFSET = 2;
 };
 
 #endif //TP3_OC1_MEMORIA_HEADERS_MEMORIA_H
