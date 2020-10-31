@@ -2,7 +2,6 @@ CC=g++
 CFLAGS=-Wall -Wextra
 EXEC=./tp3
 
-
 run: main.cpp memoria.o cache.o cpu.o
 	$(CC) $(CFLAGS) main.cpp memoria.o cache.o cpu.o -o $(EXEC)
 	./$(EXEC)
