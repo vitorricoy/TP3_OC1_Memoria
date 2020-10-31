@@ -20,7 +20,7 @@ struct InformacaoOperacao {
 
 int main() {
     //Determina que a saída e entrada padrão serão nos determinados arquivos
-    freopen("input.txt", "r", stdin);
+    freopen("entrada.txt", "r", stdin);
     freopen("result.txt", "w", stdout);
     
     //Declara as variáveis dos dados que serão lidos
